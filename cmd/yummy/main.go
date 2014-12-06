@@ -6,6 +6,7 @@ import (
 
 	"github.com/facebookgo/freeport"
 	"github.com/gin-gonic/gin"
+	"github.com/shutej/yummy/static"
 	open "github.com/skratchdot/open-golang/open"
 )
 
