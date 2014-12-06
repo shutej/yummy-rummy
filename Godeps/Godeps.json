@@ -1,0 +1,21 @@
+{
+	"ImportPath": "github.com/shutej/yummy-rummy",
+	"GoVersion": "go1.3.3",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/elazarl/go-bindata-assetfs",
+			"Rev": "3e654f77289b15b2bf32a2a3fc9b9e34d671005f"
+		},
+		{
+			"ImportPath": "github.com/facebookgo/freeport",
+			"Rev": "44a978642d985920546ad1342bc95255ab259a42"
+		},
+		{
+			"ImportPath": "github.com/skratchdot/open-golang/open",
+			"Rev": "ba570a111973b539baf23c918213059543b5bb6e"
+		}
+	]
+}
