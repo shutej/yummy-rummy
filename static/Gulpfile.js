@@ -53,7 +53,7 @@ gulp.task("serve", function() {
 
 gulp.task("go-bindata", ["copy"], function(cb) {
   exec(
-    "go-bindata -pkg=static -o=build.go -nomemcopy=true build build/css build/img build/js",
+    "go-bindata -pkg=static -o=build.go -nomemcopy=true build/...",
     function (err, stdout, stderr) {
       console.log(stdout);
       console.log(stderr);
