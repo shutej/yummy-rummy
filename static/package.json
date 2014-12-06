@@ -1,13 +1,13 @@
 {
-  "name": "react-seed",
+  "name": "yummy-rummy-static",
   "version": "0.0.1",
-  "description": "A starter project for React",
+  "description": "A version of Yummy Rummy that uses React.",
   "main": "index.js",
-  "homepage": "https://github.com/fizerkhan/react-seed",
+  "homepage": "https://github.com/shutej/yummy-rummy",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Fizer Khan",
+  "author": "Jeremy Shute",
   "license": "MIT",
   "devDependencies": {
     "envify": "~3.2.0",
