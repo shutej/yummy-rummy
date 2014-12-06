@@ -7,11 +7,11 @@ import (
 
 	"github.com/elazarl/go-bindata-assetfs"
 	"github.com/facebookgo/freeport"
-	"github.com/shutej/yummy/static"
+	"github.com/shutej/yummy-rummy/static"
 	open "github.com/skratchdot/open-golang/open"
 )
 
-func OpenInBrowser() error {
+func openInBrowser() error {
 	port, err := freeport.Get()
 	if err != nil {
 		return fmt.Errorf("error finding free port: %v", err)
@@ -30,5 +30,5 @@ func main() {
 					AssetDir: static.AssetDir,
 					Prefix:   "build/",
 				})))
-	log.Fatal(OpenInBrowser())
+	log.Fatal(openInBrowser())
 }
