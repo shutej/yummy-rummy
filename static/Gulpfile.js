@@ -5,7 +5,8 @@ var gulp       = require("gulp"),
     sass       = require("gulp-sass"),
     uglify     = require("gulp-uglify"),
     watch      = require("gulp-watch"),
-    connect    = require("gulp-connect");
+    connect    = require("gulp-connect"),
+    exec       = require("child_process").exec;
 
 var ROOT = __dirname + "/build"
 
@@ -31,7 +32,7 @@ gulp.task("images", function () {
       .pipe(gulp.dest("build/img/"));
 });
 
-gulp.task("copy", function(){
+gulp.task("copy", ["styles", "scripts", "images"], function() {
   return gulp.src("client/*.html")
     .pipe(gulp.dest("build/"));
 });
@@ -51,5 +52,14 @@ gulp.task("serve", function() {
   });
 });
 
-gulp.task("build", ["styles", "scripts", "images", "copy"]);
-gulp.task("default", ["build"]);
+gulp.task("go-bindata", ["copy"], function(cb) {
+  exec(
+    "go-bindata -pkg=static -o=build.go -nomemcopy=true build build/css build/img build/js",
+    function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      cb(err);
+    });
+});
+
+gulp.task("default", ["go-bindata"]);
