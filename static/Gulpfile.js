@@ -3,6 +3,7 @@ var gulp       = require("gulp"),
     concat     = require("gulp-concat"),
     imagemin   = require("gulp-imagemin"),
     sass       = require("gulp-sass"),
+    uglify     = require("gulp-uglify"),
     watch      = require("gulp-watch"),
     connect    = require("gulp-connect");
 
@@ -17,9 +18,10 @@ gulp.task("styles", function () {
 gulp.task("scripts", function () {
   return gulp.src(["client/js/app.js"])
       .pipe(browserify({
-          debug: true,
+          debug: false,
           transform: ["reactify"]
       }))
+      .pipe(uglify())
       .pipe(gulp.dest("build/js/"));
 });
 
