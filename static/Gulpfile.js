@@ -1,6 +1,5 @@
 var gulp       = require("gulp"),
     browserify = require("gulp-browserify"),
-    concat     = require("gulp-concat"),
     imagemin   = require("gulp-imagemin"),
     sass       = require("gulp-sass"),
     uglify     = require("gulp-uglify"),

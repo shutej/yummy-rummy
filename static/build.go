@@ -166,25 +166,25 @@ type _bintree_t struct {
 }
 var _bintree = &_bintree_t{nil, map[string]*_bintree_t{
 	"build": &_bintree_t{nil, map[string]*_bintree_t{
-		"index.html": &_bintree_t{build_index_html, map[string]*_bintree_t{
-		}},
 		"css": &_bintree_t{nil, map[string]*_bintree_t{
 			"main.css": &_bintree_t{build_css_main_css, map[string]*_bintree_t{
 			}},
 		}},
 		"img": &_bintree_t{nil, map[string]*_bintree_t{
+			"peppermint.crop.jpg": &_bintree_t{build_img_peppermint_crop_jpg, map[string]*_bintree_t{
+			}},
 			"cake.crop.jpg": &_bintree_t{build_img_cake_crop_jpg, map[string]*_bintree_t{
 			}},
 			"chocolate.crop.jpg": &_bintree_t{build_img_chocolate_crop_jpg, map[string]*_bintree_t{
 			}},
 			"cookies.crop.jpg": &_bintree_t{build_img_cookies_crop_jpg, map[string]*_bintree_t{
 			}},
-			"peppermint.crop.jpg": &_bintree_t{build_img_peppermint_crop_jpg, map[string]*_bintree_t{
-			}},
 		}},
 		"js": &_bintree_t{nil, map[string]*_bintree_t{
 			"app.js": &_bintree_t{build_js_app_js, map[string]*_bintree_t{
 			}},
+		}},
+		"index.html": &_bintree_t{build_index_html, map[string]*_bintree_t{
 		}},
 	}},
 }}
