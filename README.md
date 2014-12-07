@@ -6,7 +6,12 @@ to order from GrubHub after they canceled it!  Now our food is delivered via
 Seamless.
 
 I put together this game as an exercise for how to deploy a single
-multi-platform application that runs similarly everywhere.
+multi-platform application that runs similarly everywhere.  Downloads:
+
+* [Windows AMD64](https://drone.io/github.com/shutej/yummy-rummy/files/dist/windows_amd64/yummy-rummy.exe)
+* [Mac OS X AMD64](https://drone.io/github.com/shutej/yummy-rummy/files/dist/darwin_amd64/yummy-rummy)
+* [Linux AMD64](https://drone.io/github.com/shutej/yummy-rummy/files/dist/linux_amd64/yummy-rummy)
+* [Linux ARM](https://drone.io/github.com/shutej/yummy-rummy/files/dist/linux_arm/yummy-rummy)
 
 To develop this app, you'll need both Go and Node.  Typical workflow looks like this:
 
